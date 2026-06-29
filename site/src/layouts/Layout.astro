@@ -5,8 +5,8 @@ interface Props {
 }
 
 const { title, description } = Astro.props;
-const siteUrl = 'https://muhammadabdullah.dev';
-const ogImage = `${siteUrl}/og-image.svg`;
+const siteUrl = Astro.site?.toString().replace(/\/$/, '') ?? 'https://muhammad-abdullah.pages.dev';
+const ogImage = `${siteUrl}/og-image.png`;
 ---
 
 <!doctype html>
