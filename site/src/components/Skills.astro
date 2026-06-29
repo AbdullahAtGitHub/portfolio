@@ -1,0 +1,66 @@
+---
+const skillGroups = [
+  {
+    label: 'Backend and distributed systems',
+    skills: [
+      'Java', 'Spring Boot', 'Python', 'FastAPI', 'async SQLAlchemy 2.0', 'Go', 'Gin',
+      'microservices', 'event-driven architecture', 'background job orchestration (Arq)',
+      'gRPC', 'REST APIs', 'system design', 'high availability', 'fault tolerance',
+    ],
+  },
+  {
+    label: 'Data and storage',
+    skills: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'MinIO', 'Snowflake', 'distributed caching'],
+  },
+  {
+    label: 'AI and LLM integration',
+    skills: ['LLM-backed services', 'Gemini'],
+  },
+  {
+    label: 'Messaging and streaming',
+    skills: ['Apache Kafka', 'RabbitMQ'],
+  },
+  {
+    label: 'Cloud and DevOps',
+    skills: ['AWS (EC2, Lambda, RDS, S3)', 'GCP', 'Docker', 'Kubernetes', 'Terraform', 'GitHub Actions', 'CI/CD'],
+  },
+  {
+    label: 'Observability',
+    skills: ['CloudWatch', 'Sumo Logic', 'Prometheus', 'Grafana', 'Jaeger', 'Apache Airflow'],
+  },
+  {
+    label: 'Auth and security',
+    skills: ['OAuth 2.0', 'JWT', 'RBAC', 'Microsoft SSO'],
+  },
+  {
+    label: 'Frontend (secondary)',
+    skills: ['TypeScript', 'React', 'Next.js', 'Svelte'],
+  },
+];
+---
+
+<section id="skills" class="mx-auto max-w-5xl px-4 py-20 sm:px-6" aria-labelledby="skills-heading">
+  <div class="fade-in">
+    <p class="font-mono-accent mb-3 text-xs uppercase tracking-widest text-sky-500 dark:text-sky-400">Skills</p>
+    <h2 id="skills-heading" class="mb-12 text-2xl font-bold text-zinc-900 sm:text-3xl dark:text-zinc-50">
+      Technical depth
+    </h2>
+
+    <div class="grid gap-8 sm:grid-cols-2">
+      {skillGroups.map((group) => (
+        <div>
+          <h3 class="mb-3 text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+            {group.label}
+          </h3>
+          <div class="flex flex-wrap gap-2">
+            {group.skills.map((skill) => (
+              <span class="font-mono-accent rounded px-2.5 py-1 text-xs text-zinc-700 ring-1 ring-zinc-300 transition-colors hover:ring-sky-400 hover:text-sky-600 dark:ring-zinc-700 dark:text-zinc-300 dark:hover:ring-sky-400 dark:hover:text-sky-400">
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

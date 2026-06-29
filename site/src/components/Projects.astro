@@ -1,0 +1,76 @@
+---
+const projects = [
+  {
+    name: 'AI Memory Wiki',
+    status: 'recent',
+    description: 'An async backend that ingests user content, processes it through a background job pipeline, and uses an LLM to generate and cross-link structured wiki-style memory pages. Demonstrates async-first API design, durable background processing, and LLM integration in a production-shaped service.',
+    stack: ['FastAPI', 'SQLAlchemy 2.0 (async)', 'Redis', 'Arq', 'MinIO', 'Gemini 2.5 Flash-Lite'],
+    href: 'https://github.com/AbdullahAtGitHub/memory-wiki',
+    linkLabel: 'View on GitHub',
+  },
+  {
+    name: 'Distributed Microservices Platform',
+    status: 'in development',
+    description: 'A production-style ride-sharing backend in Go using microservices, gRPC, RabbitMQ, Stripe, and Google Cloud, deployed with Terraform, Kubernetes, and Docker. Implements ride lifecycle management, asynchronous workflows, payment processing, and distributed tracing with Jaeger.',
+    stack: ['Go', 'gRPC', 'RabbitMQ', 'Stripe', 'GCP', 'Terraform', 'Kubernetes', 'Docker', 'Jaeger'],
+    href: 'https://github.com/AbdullahAtGitHub',
+    linkLabel: 'GitHub (repo link coming)',
+  },
+  {
+    name: 'Todo Application',
+    status: null,
+    description: 'A full-stack application demonstrating clean architecture, RESTful API design, database migrations, and containerized deployment.',
+    stack: ['Go', 'Gin', 'PostgreSQL', 'Docker', 'Svelte'],
+    href: 'https://github.com/AbdullahAtGitHub',
+    linkLabel: 'GitHub (repo link coming)',
+  },
+];
+---
+
+<section id="projects" class="mx-auto max-w-5xl px-4 py-20 sm:px-6" aria-labelledby="projects-heading">
+  <div class="fade-in">
+    <p class="font-mono-accent mb-3 text-xs uppercase tracking-widest text-sky-500 dark:text-sky-400">Projects</p>
+    <h2 id="projects-heading" class="mb-12 text-2xl font-bold text-zinc-900 sm:text-3xl dark:text-zinc-50">
+      Open source and personal work
+    </h2>
+
+    <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      {projects.map((project) => (
+        <article class="group flex flex-col rounded-xl border border-zinc-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-0.5 hover:border-sky-400/50 hover:shadow-md dark:border-zinc-800 dark:bg-zinc-900/50 dark:hover:border-sky-400/40">
+          <div class="mb-3 flex items-start justify-between gap-2">
+            <h3 class="font-semibold text-zinc-800 dark:text-zinc-100">{project.name}</h3>
+            {project.status && (
+              <span class="font-mono-accent flex-shrink-0 rounded-full bg-sky-400/10 px-2 py-0.5 text-xs text-sky-500 ring-1 ring-sky-400/30 dark:text-sky-400">
+                {project.status}
+              </span>
+            )}
+          </div>
+          <p class="mb-4 flex-1 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">
+            {project.description}
+          </p>
+          <div class="mb-4 flex flex-wrap gap-1.5">
+            {project.stack.map((tech) => (
+              <span class="font-mono-accent rounded-md bg-zinc-100 px-2 py-0.5 text-xs text-zinc-500 dark:bg-zinc-800 dark:text-zinc-500">
+                {tech}
+              </span>
+            ))}
+          </div>
+          <a
+            href={project.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 text-sm font-medium text-sky-500 transition-colors hover:text-sky-400 dark:text-sky-400 dark:hover:text-sky-300"
+            aria-label={`${project.linkLabel} - ${project.name}`}
+          >
+            {project.linkLabel}
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="transition-transform group-hover:translate-x-0.5">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+          </a>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
