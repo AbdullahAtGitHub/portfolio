@@ -8,7 +8,7 @@ export const GET: APIRoute = () => {
   <text x="80" y="300" font-family="system-ui, sans-serif" font-size="72" font-weight="700" fill="#fafafa">Muhammad</text>
   <text x="80" y="390" font-family="system-ui, sans-serif" font-size="72" font-weight="700" fill="#fafafa">Abdullah</text>
   <text x="80" y="470" font-family="system-ui, sans-serif" font-size="22" fill="#71717a">Java · Python · Go · Distributed Systems · High Availability</text>
-  <text x="80" y="560" font-family="monospace, sans-serif" font-size="18" fill="#38bdf8">muhammadabdullah.dev</text>
+  <text x="80" y="560" font-family="monospace, sans-serif" font-size="18" fill="#38bdf8">muhammad-abdullah.pages.dev</text>
 </svg>`;
 
   return new Response(svg, {
