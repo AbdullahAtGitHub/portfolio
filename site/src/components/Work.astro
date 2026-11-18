@@ -1,9 +1,21 @@
 ---
 const roles = [
   {
-    title: 'Backend Software Engineer',
-    company: 'ExperLabs',
-    period: 'March 2023 to Present',
+    title: 'Senior Software Engineer',
+    company: 'Veeam Software',
+    period: 'September 2026 to Present',
+    bullets: [
+      { metric: 'Pipeline orchestration', text: 'on the Securiti AI data security and privacy platform at Veeam: develop the Python (asyncio) orchestrator that schedules and runs scan and SaaS backup/restore pipeline stages on customer-side Kubernetes clusters (EKS).' },
+      { metric: 'Failure handling', text: 'across the worker and pod lifecycle: crash detection, retries, dead-lettering, and restart recovery.' },
+      { metric: 'Root-cause analysis', text: 'of failures across the orchestrator, Kubernetes, and the Go backend, reproduced on live clusters with purpose-built synthetic pipelines and verified with before/after runs.' },
+      { metric: '40+ module', text: 'Go monorepo work on pipeline definitions, data-source lifecycle, and log ingestion, plus hardening of shared libraries against security findings.' },
+    ],
+    stack: ['Python', 'asyncio', 'Go', 'Kubernetes', 'EKS', 'Docker', 'AWS', 'Helm'],
+  },
+  {
+    title: 'Senior Backend / Full-Stack Engineer',
+    company: 'Exper Labs',
+    period: 'March 2023 to August 2026',
     bullets: [
       { metric: '$650K+', text: 'in projected annual savings for FBBrands Inc. (US enterprise client) via an end-to-end sourcing and costing platform processing vendor quotations from 20+ countries.' },
       { metric: '98% faster', text: 'critical pricing API, from 4+ minutes to roughly 5 seconds, through query-plan analysis, indexing, Redis caching, and backend redesign.' },
@@ -16,7 +28,7 @@ const roles = [
   {
     title: 'Associate Software Engineer',
     company: 'i2c Inc.',
-    period: 'February 2022 to March 2023',
+    period: 'April 2022 to March 2023',
     bullets: [
       { metric: 'Millions of users', text: 'supported on a global card transaction platform with strict uptime, consistency, and latency requirements.' },
       { metric: 'Sub-100ms', text: 'response times maintained across mission-critical financial transaction services in a distributed, high-throughput environment.' },
